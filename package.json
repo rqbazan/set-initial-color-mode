@@ -6,8 +6,12 @@
   "module": "src/index.js",
   "author": "Ricardo Alexis Quiroz Bazan",
   "license": "MIT",
+  "files": [
+    "out"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "rollup": "^2.35.1",
