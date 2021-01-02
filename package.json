@@ -1,0 +1,16 @@
+{
+  "name": "@rqbazan/set-initial-color-mode",
+  "version": "1.0.0",
+  "main": "out/index.js",
+  "browser": "out/index.js",
+  "module": "src/index.js",
+  "author": "Ricardo Alexis Quiroz Bazan",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "rollup": "^2.35.1",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
+}
