@@ -1,6 +1,6 @@
 {
   "name": "@rqbazan/set-initial-color-mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "out/index.js",
   "browser": "out/index.js",
   "module": "src/index.js",
