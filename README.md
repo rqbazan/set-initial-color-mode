@@ -1,11 +1,15 @@
 # Set Initial Color Mode 🌗
 
+## Inspiration
+
+[The Quest for the Perfect Dark Mode](https://www.joshwcomeau.com/react/dark-mode/) by [Josh Comeau](https://twitter.com/JoshWComeau)
+
 ## Usage
 
 ### Plain HTML
 
 ```html
-<script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.1.0" />
+<script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.1.1/dist/browser.js" />
 ```
 
 ### Next.js
