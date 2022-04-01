@@ -1,5 +1,5 @@
 function getInitialColorMode() {
-  const persistedColorPreference = localStorage.getItem('color-mode')
+  const persistedColorPreference = localStorage.getItem(__COLOR_MODE_KEY__)
 
   const hasPersistedPreference = typeof persistedColorPreference === 'string'
 
@@ -12,18 +12,18 @@ function getInitialColorMode() {
   const hasMediaQueryPreference = typeof mql.matches === 'boolean'
 
   if (hasMediaQueryPreference) {
-    return mql.matches ? 'dark' : 'light'
+    return mql.matches ? __DARK__ : __LIGHT__
   }
 
-  return 'light'
+  return __LIGHT__
 }
 
 const colorMode = getInitialColorMode()
 
-if (colorMode === 'dark') {
-  document.documentElement.classList.add('dark')
+if (colorMode === __DARK__) {
+  document.documentElement.classList.add(__DARK__)
 } else {
-  document.documentElement.classList.remove('dark')
+  document.documentElement.classList.remove(__DARK__)
 }
 
-localStorage.setItem('color-mode', colorMode)
+localStorage.setItem(__COLOR_MODE_KEY__, colorMode)
