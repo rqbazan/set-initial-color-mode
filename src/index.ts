@@ -22,6 +22,12 @@ export function useColorModeToggle() {
     if (colorMode) {
       localStorage.setItem(STORAGE_KEY, colorMode)
     }
+
+    if (colorMode === ColorModes.DARK) {
+      document.documentElement.classList.add(ColorModes.DARK)
+    } else if (colorMode === ColorModes.LIGHT) {
+      document.documentElement.classList.remove(ColorModes.DARK)
+    }
   }, [colorMode])
 
   function onToggle() {

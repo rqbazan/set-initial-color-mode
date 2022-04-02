@@ -42,18 +42,10 @@ export default class Document extends NextDocument {
 
 ```jsx
 import * as React from 'react'
-import { ColorModes, useColorModeToggle } from '@rqbazan/set-initial-color-mode'
+import { useColorModeToggle } from '@rqbazan/set-initial-color-mode'
 
 function Switch() {
-  const { onToggle, colorMode } = useColorModeToggle()
-
-  React.useEffect(() => {
-    if (colorMode === ColorModes.DARK) {
-      document.documentElement.classList.add('my-dark-class')
-    } else if (colorMode === ColorModes.LIGHT) {
-      document.documentElement.classList.remove('my-dark-class')
-    }
-  }, [colorMode])
+  const { onToggle } = useColorModeToggle()
 
   return <input type="checkbox" onClick={onToggle} />
 }
