@@ -9,14 +9,14 @@
 ### Plain HTML
 
 ```html
-<script src="https://unpkg.com/@rqbazan/set-initial-color-mode@1.1.1/dist/browser.js" />
+<script src="https://unpkg.com/@rqbazan/set-initial-color-mode/dist/browser.js" />
 ```
 
 ### Next.js
 
 ```jsx
-import NextDocument, { Head, Html, Main, NextScript } from 'next/document'
-import { getJsText } from '@rqbazan/set-initial-color-mode'
+import NextDocument, { Head, Html, Main, NextScript } from "next/document";
+import { getJsText } from "@rqbazan/set-initial-color-mode";
 
 export default class Document extends NextDocument {
   render() {
@@ -33,7 +33,7 @@ export default class Document extends NextDocument {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 ```
@@ -41,12 +41,12 @@ export default class Document extends NextDocument {
 ### React.js
 
 ```jsx
-import * as React from 'react'
-import { useColorModeToggle } from '@rqbazan/set-initial-color-mode'
+import * as React from "react";
+import { useColorModeToggle } from "@rqbazan/set-initial-color-mode";
 
 function Switch() {
-  const { onToggle } = useColorModeToggle()
+  const { onToggle } = useColorModeToggle();
 
-  return <input type="checkbox" onClick={onToggle} />
+  return <input type="checkbox" onClick={onToggle} />;
 }
 ```

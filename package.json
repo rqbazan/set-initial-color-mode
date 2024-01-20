@@ -1,16 +1,16 @@
 {
   "name": "@rqbazan/set-initial-color-mode",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "exports": {
     "./browser": {
       "require": "./dist/browser.js"
     },
     ".": {
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
-  "typings": "./dist/index.d.ts",
   "author": {
     "name": "Ricardo Q. Bazan",
     "email": "raquirozbazan@gmail.com",
