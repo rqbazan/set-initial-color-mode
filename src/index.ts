@@ -2,12 +2,14 @@ import * as React from 'react'
 
 export const STORAGE_KEY = __COLOR_MODE_KEY__
 
+export const CUSTOM_EVENT_NAME = __CUSTOM_EVENT_NAME__
+
 export const ColorModes = {
   DARK: __DARK__,
   LIGHT: __LIGHT__,
 }
 
-export type ColorMode = typeof ColorModes[keyof typeof ColorModes]
+export type ColorMode = (typeof ColorModes)[keyof typeof ColorModes]
 
 export function useColorModeToggle() {
   const [colorMode, setColorMode] = React.useState<ColorMode>(() => {
@@ -21,6 +23,11 @@ export function useColorModeToggle() {
   React.useEffect(() => {
     if (colorMode) {
       localStorage.setItem(STORAGE_KEY, colorMode)
+      document.dispatchEvent(
+        new CustomEvent(CUSTOM_EVENT_NAME, {
+          detail: { colorMode },
+        }),
+      )
     }
 
     if (colorMode === ColorModes.DARK) {
