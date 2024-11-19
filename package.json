@@ -17,10 +17,7 @@
     "url": "https://rcrd.space"
   },
   "license": "MIT",
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
     "build": "rollup -c && tsc",
     "prepublishOnly": "npm run build",
