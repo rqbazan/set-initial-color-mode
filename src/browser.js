@@ -27,3 +27,9 @@ if (colorMode === __DARK__) {
 }
 
 localStorage.setItem(__COLOR_MODE_KEY__, colorMode)
+window.__COLOR_MODE__ = {
+  CUSTOM_EVENT_NAME: __CUSTOM_EVENT_NAME__,
+  STORAGE_KEY: __COLOR_MODE_KEY__,
+  LIGHT: __LIGHT__,
+  DARK: __DARK__,
+}

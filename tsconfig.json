@@ -7,7 +7,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "outDir": "dist",
-    "declaration": true,
-    "emitDeclarationOnly": true
+    "declaration": true
   }
 }
