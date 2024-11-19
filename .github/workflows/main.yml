@@ -1,0 +1,25 @@
+name: CI
+
+on: [push]
+
+jobs:
+  testing:
+    name: 👀 Testing
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@master
+
+      - name: 🍞 Setup bun.sh
+        uses: oven-sh/setup-bun@v1
+
+      - name: 📦 Install dependencies
+        run: bun install
+
+      - name: 🔎 Static testing
+        run: bun test:static
